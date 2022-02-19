@@ -6,6 +6,10 @@
 // 3. /user/:id сторінка з інфою про одного юзера
 
 // 4. зробити якщо не відпрацюють ендпоінти то на сторінку notFound редірект
+//
+// Практична:
+// Необхідно розширити ваше ДЗ:
+//     - додайте ендпоінт signIn який буде приймати email і password і якщо все вірно то редірект на сторінку цього
 
 const express = require('express');
 const { engine } = require('express-handlebars');
@@ -66,6 +70,21 @@ app.get('/users/:userId', ({ params }, res) => {
     }
 
     res.render('userInfo', { user });
+});
+
+app.get('/signIn', (req, res) => {
+    res.render('signIn');
+})
+
+app.post('/signIn', ({ body }, res) => {
+    const user = users.find(user => user.email === body.email && user.password === body.password);
+    if (!user) {
+        error = 'Try again!';
+        res.redirect('/error');
+        return;
+    }
+
+    res.redirect(`/users/${user.id}`);
 });
 
 app.get('/error', (req, res) => {

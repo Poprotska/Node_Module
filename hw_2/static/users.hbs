@@ -9,12 +9,10 @@
 <body class="wrapper">
 
 {{#each users}}
-    <div class="title">
-        {{this.firstName}}
-        <br/>
-        {{this.lastName}}
+    <div class="title" style="padding-left: 10px">
+        {{this.firstName}} {{this.lastName}}
         <form class="form" action="/users/{{this.id}}">
-            <input type="submit" value="info">
+            <input class="btn" type="submit" value="info">
         </form>
     </div>
 {{/each}}
