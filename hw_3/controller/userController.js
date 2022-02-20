@@ -22,13 +22,7 @@ module.exports = {
 
     getUserById: ({ params, user }, res) => {
         res.render('userInfo', { user });
-    },
-
-    // deleteUserById: ({ params }, res) => {
-    //     users = users.filter(user => user.id !== +params.userId);
-    //
-    //     res.redirect('/users');
-    // }
+    }
 };
 
 module.exports = {

@@ -11,8 +11,6 @@ router.get('/:userId',
     userController.getUserById
 );
 router.post('/:userId',
-    userMiddleware.checkId
-    // userController.deleteUserById
-    );
+    userMiddleware.checkId );
 
 module.exports = router;
