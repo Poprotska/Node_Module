@@ -17,6 +17,3 @@ module.exports = {
     }
 }
 
-module.exports = {
-    signInMiddleware: require('./signInMiddleware')
-};

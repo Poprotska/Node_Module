@@ -1,7 +1,7 @@
 const router = require('express').Router();
 
-const { signInController } = require('../controller/signInController');
-const { signInMiddleware } = require('../middleware/signInMiddleware');
+const { signInController } = require('../controller');
+const { signInMiddleware } = require('../middleware');
 
 router.get('/', signInController.signInControl);
 router.post('/', signInMiddleware.signInForm, signInController.signIn);

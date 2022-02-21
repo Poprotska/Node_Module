@@ -1,4 +1,4 @@
-let { users } = require('../db/users');
+let { users } = require('../db');
 
 module.exports = {
     getAllUsers: ({ query }, res) => {
@@ -23,8 +23,4 @@ module.exports = {
     getUserById: ({ params, user }, res) => {
         res.render('userInfo', { user });
     }
-};
-
-module.exports = {
-    userController: require('./userController')
 };

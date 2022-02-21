@@ -53,7 +53,3 @@ module.exports = {
         }
     }
 };
-
-module.exports = {
-    userMiddleware: require('./userMiddleware')
-};

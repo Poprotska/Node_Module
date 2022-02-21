@@ -1,4 +1,4 @@
-const { users } = require('../db/users');
+const { users } = require('../db');
 
 module.exports = {
     createUserForm: (req, res) => {
@@ -11,6 +11,3 @@ module.exports = {
     }
 };
 
-module.exports = {
-    loginController: require('./loginController')
-};

@@ -7,7 +7,3 @@ module.exports = {
         res.redirect(`/users/${user.id}`);
     }
 };
-
-module.exports = {
-    signInController: require('./signInController'),
-};
